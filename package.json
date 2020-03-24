@@ -1,0 +1,39 @@
+{
+  "name": "discomush",
+  "version": "1.0.0",
+  "description": "This is a reimagining of an old idea to try and find a good way to leverage Discord bots to make a game drawing influence with older MUD/MUSH games and Tabletop PbP, but with the ability to be run entirely in a Discord server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yakuzadave/DiscoMush.git"
+  },
+  "keywords": [
+    "mud",
+    "mush",
+    "rpg",
+    "dnd",
+    "tabletop",
+    "discord",
+    "bot",
+    "game",
+    "multiplayer",
+    "text-game"
+  ],
+  "author": "Dave Carmocan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yakuzadave/DiscoMush/issues"
+  },
+  "homepage": "https://github.com/yakuzadave/DiscoMush#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "d20": "^1.4.1",
+    "discord.js": "^12.0.2",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "lowdb": "^1.0.0"
+  }
+}
