@@ -35,16 +35,7 @@ module.exports = client => {
     the default settings are used.
   
     */
-    client.getSettings = guild => {
-      const defaults = client.config.defaultSettings || {};
-      if (!guild) return defaults;
-      const guildData = client.settings.get(guild) || {};
-      const returnObject = {};
-      Object.keys(defaults).forEach(key => {
-        returnObject[key] = guildData[key] ? guildData[key] : defaults[key];
-      });
-      return returnObject;
-    };
+
   
     /*
     SINGLE-LINE AWAITMESSAGE
