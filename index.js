@@ -58,6 +58,8 @@ for (const file of commandFiles) {
 }
 
 
+console.log(client.commands)
+
 
 
 //load the token from .env file

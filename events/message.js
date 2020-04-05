@@ -15,14 +15,14 @@ module.exports = {
 
 
 
-        if(command == "test"){
+        if(command == "ping"){
             client.logger.log(command)
-            message.channel.send("Test sent")
+            client.commands.get('ping').execute(message, args)
 
 
         }
 
-        
+
 
     }
 };
