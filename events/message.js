@@ -1,4 +1,4 @@
-const { client, db } = require('../index.js');
+
 
 module.exports = {
 	name: 'message',
@@ -13,15 +13,12 @@ module.exports = {
         .split(/ +/g);
         const command = args.shift().toLowerCase();
 
-
-
-        if(command == "ping"){
-            client.logger.log(command)
-            client.commands.get('ping').execute(message, args)
-
+        if(client.commands.has(command)){
+            let foundCommand = client.commands.get(command)
+            console.log(foundCommand)
+            foundCommand.execute(message, args)
 
         }
-
 
 
     }

@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'args-info',
+	name: 'args',
 	description: 'Information about the arguments provided.',
 	execute(message, args) {
 		if (!args.length) {
@@ -10,4 +10,16 @@ module.exports = {
 
 		message.channel.send(`Arguments: ${args}\nArguments length: ${args.length}`);
 	},
+	conf: {
+        enabled: true,
+        guildOnly: false,
+        aliases: ["args","arg"],
+        permLevel: "Administrator"
+    },
+    help: {
+        name: "args",
+        catagory: "system",
+        description: "Command used for testing args",
+        usage: "-args <arg1> <arg2> <arg3>"
+    }
 };
