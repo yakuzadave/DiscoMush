@@ -1,21 +1,31 @@
 dependencies:
   axios: 0.19.2
   body-parser: 1.19.0
-  chalk: 4.0.0
+  chalk: 4.1.0
   d20: 1.4.1
-  discord.js: 12.1.1
+  discord.js: 12.2.0
   dotenv: 8.2.0
   express: 4.17.1
-  fs-extra: 9.0.0
+  fs-extra: 9.0.1
   line-by-line: 0.1.6
   lodash: 4.17.15
   lowdb: 1.0.0
-  moment: 2.24.0
+  moment: 2.27.0
 packages:
   /@discordjs/collection/0.1.5:
     dev: false
     resolution:
       integrity: sha512-CU1q0UXQUpFNzNB7gufgoisDHP7n+T3tkqTsp3MNUkVJ5+hS3BCvME8uCXAUFlz+6T2FbTCu75A+yQ7HMKqRKw==
+  /@discordjs/form-data/3.0.1:
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.27
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-ZfFsbgEXW71Rw/6EtBdrP5VxBJy4dthyC0tpQKGKmYFImlmmrykO14Za+BiIVduwjte0jXEBlhSKf0MWbFp9Eg==
   /@types/color-name/1.1.1:
     dev: false
     resolution:
@@ -89,7 +99,7 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
-  /chalk/4.0.0:
+  /chalk/4.1.0:
     dependencies:
       ansi-styles: 4.2.1
       supports-color: 7.1.0
@@ -97,7 +107,7 @@ packages:
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-N9oWFcegS0sFr9oh1oz2d7Npos6vNoWW9HvtCg5N1KRFpUhaAhvTv5Y58g880fZaEYSNm3qDz8SU1UrGvp+n7A==
+      integrity: sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
   /color-convert/2.0.1:
     dependencies:
       color-name: 1.1.4
@@ -181,16 +191,16 @@ packages:
     dev: false
     resolution:
       integrity: sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
-  /discord.js/12.1.1:
+  /discord.js/12.2.0:
     dependencies:
       '@discordjs/collection': 0.1.5
+      '@discordjs/form-data': 3.0.1
       abort-controller: 3.0.0
-      form-data: 3.0.0
       node-fetch: 2.6.0
-      prism-media: 1.2.1
+      prism-media: 1.2.2
       setimmediate: 1.0.5
       tweetnacl: 1.0.3
-      ws: 7.2.3
+      ws: 7.3.0
     dev: false
     engines:
       node: '>=12.0.0'
@@ -202,7 +212,7 @@ packages:
       utf-8-validate: ^5.0.2
       zlib-sync: ^0.1.6
     resolution:
-      integrity: sha512-Y6+QfAUZkb9cy27cfNqUigAgYVSKTw9jPF3mN4UDMih3Em3VQ0WjGBdX1UbE8CwFkLOu5XWQSNPdsoStTR8c2Q==
+      integrity: sha512-Ueb/0SOsxXyqwvwFYFe0msMrGqH1OMqpp2Dpbplnlr4MzcRrFWwsBM9gKNZXPVBHWUKiQkwU8AihXBXIvTTSvg==
   /dotenv/8.2.0:
     dev: false
     engines:
@@ -294,16 +304,6 @@ packages:
       node: '>=4.0'
     resolution:
       integrity: sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
-  /form-data/3.0.0:
-    dependencies:
-      asynckit: 0.4.0
-      combined-stream: 1.0.8
-      mime-types: 2.1.26
-    dev: false
-    engines:
-      node: '>= 6'
-    resolution:
-      integrity: sha512-CKMFDglpbMi6PyN+brwB9Q/GOw0eAnsrEZDgcsH5Krhz5Od/haKHAX0NmQfha2zPPz0JpWzA7GJHGSnvCRLWsg==
   /forwarded/0.1.2:
     dev: false
     engines:
@@ -316,21 +316,25 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
-  /fs-extra/9.0.0:
+  /fs-extra/9.0.1:
     dependencies:
       at-least-node: 1.0.0
-      graceful-fs: 4.2.3
+      graceful-fs: 4.2.4
       jsonfile: 6.0.1
       universalify: 1.0.0
     dev: false
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-pmEYSk3vYsG/bF651KPUXZ+hvjpgWYw/Gc7W9NFUe3ZVLczKKWIij3IKpOrQcdw4TILtibFslZ0UmR8Vvzig4g==
+      integrity: sha512-h2iAoN838FqAFJY2/qVpzFXy+EBxfVE220PalAqQLDVsFOHLJrZvut5puAbCdNv6WJk+B8ihI+k0c7JK5erwqQ==
   /graceful-fs/4.2.3:
     dev: false
     resolution:
       integrity: sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
+  /graceful-fs/4.2.4:
+    dev: false
+    resolution:
+      integrity: sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
   /has-flag/4.0.0:
     dev: false
     engines:
@@ -392,7 +396,7 @@ packages:
       universalify: 1.0.0
     dev: false
     optionalDependencies:
-      graceful-fs: 4.2.3
+      graceful-fs: 4.2.4
     resolution:
       integrity: sha512-jR2b5v7d2vIOust+w3wtFKZIfpC2pnRmFAhAC/BuweZFQR8qZzxH1OyrQ10HmdVYiXWkYUqPVsz91cG7EL2FBg==
   /line-by-line/0.1.6:
@@ -439,6 +443,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-+5dsGEEovYbT8UY9yD7eE4XTc4UwJ1jBYlgaQQF38ENsKR3wj/8q8RFZrF9WIZpB2V1ArTVFUva8sAul1NzRzQ==
+  /mime-db/1.44.0:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-/NOTfLrsPBVeH7YtFPgsVWveuL+4SjjYxaQ1xtM1KMFj7HdxlBlxeyNLzhyJVx7r4rZGJAZ/6lkKCitSc/Nmpg==
   /mime-types/2.1.26:
     dependencies:
       mime-db: 1.43.0
@@ -447,6 +457,14 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-01paPWYgLrkqAyrlDorC1uDwl2p3qZT7yl806vW7DvDoxwXi46jsjFbg+WdwotBIk6/MbEhO/dh5aZ5sNj/dWQ==
+  /mime-types/2.1.27:
+    dependencies:
+      mime-db: 1.44.0
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-JIhqnCasI9yD+SsmkquHBxTSEuZdQX5BuQnS2Vc7puQQQ+8yiP5AY5uWhpdv4YL4VM5c6iliiYWPgJ/nJQLp7w==
   /mime/1.6.0:
     dev: false
     engines:
@@ -454,10 +472,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
-  /moment/2.24.0:
+  /moment/2.27.0:
     dev: false
     resolution:
-      integrity: sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
+      integrity: sha512-al0MUK7cpIcglMv3YF13qSgdAIqxHTO7brRtaz3DlSULbqfazqkc5kEjNrLDOM7fsjshoFIihnU8snrP7zUvhQ==
   /ms/2.0.0:
     dev: false
     resolution:
@@ -502,7 +520,7 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
-  /prism-media/1.2.1:
+  /prism-media/1.2.2:
     dev: false
     peerDependencies:
       '@discordjs/opus': ^0.1.0
@@ -510,7 +528,7 @@ packages:
       node-opus: ^0.3.1
       opusscript: ^0.0.6
     resolution:
-      integrity: sha512-R3EbKwJiYlTvGwcG1DpUt+06DsxOGS5W4AMEHT7oVOjG93MjpdhGX1whHyjnqknylLMupKAsKMEXcTNRbPe6Vw==
+      integrity: sha512-I+nkWY212lJ500jLe4tN9tWO7nRiBAVdMv76P9kffZjYhw20raMlW1HSSvS+MLXC9MmbNZCazMrAr+5jEEgTuw==
   /proxy-addr/2.0.6:
     dependencies:
       forwarded: 0.1.2
@@ -653,7 +671,7 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
-  /ws/7.2.3:
+  /ws/7.3.0:
     dev: false
     engines:
       node: '>=8.3.0'
@@ -661,20 +679,20 @@ packages:
       bufferutil: ^4.0.1
       utf-8-validate: ^5.0.2
     resolution:
-      integrity: sha512-HTDl9G9hbkNDk98naoR/cHDws7+EyYMOdL1BmjsZXRUjf7d+MficC4B7HLUPlSiho0vg+CWKrGIt/VJBd1xunQ==
+      integrity: sha512-iFtXzngZVXPGgpTlP1rBqsUK82p9tKqsWRPg5L56egiljujJT3vGAYnHANvFxBieXrTFavhzhxW52jnaWV+w2w==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   axios: ^0.19.2
   body-parser: ^1.19.0
-  chalk: ^4.0.0
+  chalk: ^4.1.0
   d20: ^1.4.1
-  discord.js: ^12.1.1
+  discord.js: ^12.2.0
   dotenv: ^8.2.0
   express: ^4.17.1
-  fs-extra: ^9.0.0
+  fs-extra: ^9.0.1
   line-by-line: ^0.1.6
   lodash: ^4.17.15
   lowdb: ^1.0.0
-  moment: ^2.24.0
+  moment: ^2.27.0

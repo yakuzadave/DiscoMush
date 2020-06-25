@@ -6,15 +6,20 @@ module.exports = {
 			return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
 		} else if (args[0] === 'foo') {
 			return message.channel.send('bar');
-		}
-
-		message.channel.send(`Arguments: ${args}\nArguments length: ${args.length}`);
+		} else{
+      args.forEach(async function(arg){
+            const { client } = require('../index.js')
+            await client.wait(1000)
+        await message.channel.send(`${arg}`)
+        
+      })
+    }
 	},
 	conf: {
         enabled: true,
         guildOnly: false,
         aliases: ["args","arg"],
-        permLevel: "Administrator"
+        permLevel: "User"
     },
     help: {
         name: "args",

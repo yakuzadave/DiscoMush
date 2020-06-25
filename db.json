@@ -10,31 +10,13 @@
           "args",
           "arg"
         ],
-        "permLevel": "Administrator"
+        "permLevel": "User"
       },
       "help": {
         "name": "args",
         "catagory": "system",
         "description": "Command used for testing args",
         "usage": "-args <arg1> <arg2> <arg3>"
-      }
-    },
-    {
-      "name": "element",
-      "description": "Get a random elemental effect",
-      "conf": {
-        "enabled": true,
-        "guildOnly": false,
-        "aliases": [
-          "ele"
-        ],
-        "permLevel": "User"
-      },
-      "help": {
-        "name": "element",
-        "catagory": "game",
-        "description": "Use this command to get a random elemental effect.",
-        "usage": "-element"
       }
     },
     {
@@ -49,83 +31,10 @@
         "permLevel": "Administrator"
       },
       "help": {
-        "name": "ping",
-        "catagory": "system",
-        "description": "Ping!",
+        "name": "char",
+        "catagory": "gamee",
+        "description": "Commands for managing characters!",
         "usage": "-ping"
-      }
-    },
-    {
-      "name": "roll",
-      "description": "Roll some dice.",
-      "conf": {
-        "enabled": true,
-        "guildOnly": false,
-        "aliases": [
-          "r"
-        ],
-        "permLevel": "User"
-      },
-      "help": {
-        "name": "element",
-        "catagory": "game",
-        "description": "Use this command to roll some dice",
-        "usage": "-roll [diceNum]"
-      }
-    },
-    {
-      "name": "weave",
-      "description": "weave dice",
-      "conf": {
-        "enabled": true,
-        "guildOnly": false,
-        "aliases": [
-          "w"
-        ],
-        "permLevel": "User"
-      },
-      "help": {
-        "name": "weave",
-        "catagory": "game",
-        "description": "Use this command to roll some weave dice!",
-        "usage": "-weave [diceNum]"
-      }
-    },
-    {
-      "name": "webhook",
-      "description": "Create a webhook",
-      "conf": {
-        "enabled": true,
-        "guildOnly": false,
-        "aliases": [
-          "hook"
-        ],
-        "permLevel": "User"
-      },
-      "help": {
-        "name": "webhook",
-        "catagory": "system",
-        "description": "Use this command to create a webhook.",
-        "usage": "-webhook [webhookName]"
-      }
-    },
-    {
-      "name": "args",
-      "description": "Information about the arguments provided.",
-      "conf": {
-        "enabled": true,
-        "guildOnly": false,
-        "aliases": [
-          "args",
-          "arg"
-        ],
-        "permLevel": "Administrator"
-      },
-      "help": {
-        "name": "args",
-        "catagory": "system",
-        "description": "Command used for testing args",
-        "usage": "-args <arg1> <arg2> <arg3>"
       }
     },
     {
