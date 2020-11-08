@@ -36,7 +36,6 @@ module.exports = client => {
   
     */
 
-
   //client roll function.  Playing with the ability to allow the client to roll.
   client.roll = async dice => {
     return d20.roll(dice);
@@ -71,6 +70,18 @@ module.exports = client => {
 
     return text;
   };
+  
+  client.getUserFromMention = function getUserFromMention(mention){
+    if (!mention) return;
+    if (mention.startsWith('<@') && mention.endsWith('>')) {
+      mention = mention.slice(2, -1);
+      if (mention.startsWith('!')) {
+        mention = mention.slice(1);
+      }
+      return client.users.cache.get(mention);
+    }
+    
+  }
 
   client.loadCommand = commandName => {
     try {

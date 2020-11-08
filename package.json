@@ -30,17 +30,21 @@
   },
   "homepage": "https://github.com/yakuzadave/DiscoMush#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.0",
     "body-parser": "^1.19.0",
     "chalk": "^4.1.0",
     "d20": "^1.4.1",
-    "discord.js": "^12.2.0",
+    "discord.js": "^12.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fs-extra": "^9.0.1",
     "line-by-line": "^0.1.6",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
-    "moment": "^2.27.0"
+    "moment": "^2.29.1",
+    "@google-cloud/dialogflow-cx": "^1.1.0"
+  },
+  "engines": {
+    "node": ">12"
   }
 }

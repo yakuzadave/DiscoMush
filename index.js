@@ -1,3 +1,4 @@
+// Add in Deps for the bot
 require("dotenv").config();
 const express = require("express");
 const app = express();
@@ -11,7 +12,7 @@ if (Number(process.version.slice(1).split(".")[0]) < 8)
     "Node 8.0.0 or higher is required. Update Node on your system."
   );
 
-//Load lowdb and set defaults
+//Load lowdb and set defaults  (this is a working exampe and may need to change later)
 const Filesync = require("lowdb/adapters/FileSync");
 const adapter = new Filesync("db.json");
 const low = require("lowdb");
@@ -55,9 +56,11 @@ for (const file of eventFiles) {
 }
 
 db.set("commands", "[]");
+db.set("roles", [])
 db.write();
 
 client.commands = new Discord.Collection();
+client.db = db;
 const commandFiles = fs
   .readdirSync("./commands")
   .filter(file => file.endsWith(".js"));
@@ -71,7 +74,6 @@ for (const file of commandFiles) {
 }
 
 let dbCommands = db.get("commands").value();
-console.log(dbCommands);
 
 //load the token from .env file
 client.login(process.env.TOKEN);
@@ -88,6 +90,12 @@ app.use(bodyParser.json());
 app.get("/", function(request, response) {
   response.send("Live");
 });
+
+app.get("/commands", function(request, response) {
+  let commands = db.get("commands").value();
+  response.send(commands);
+});
+
 //add listener
 var listener = app.listen(process.env.PORT, function() {
   console.log(`Your app is listening on port ${listener.address().port}`);
@@ -96,3 +104,4 @@ var listener = app.listen(process.env.PORT, function() {
 // export the client and the db
 module.exports.client = client;
 module.exports.db = db;
+module.exports.app = app;

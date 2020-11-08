@@ -1,4 +1,3 @@
-
 module.exports = {
   name: "message",
   description: "client message event",
@@ -8,6 +7,15 @@ module.exports = {
       .trim()
       .split(/ +/g);
     const command = args.shift().toLowerCase();
+    console.log(`${message.author.username}(${message.author.id}):  ${message.content}`)
+    let players = client.db.get('players').value()
+    let obj = {}
+    obj.name = message.author.username
+    obj.id = message.author.id
+    players.push(obj)
+    let setPlayers = [...new Set(players)]
+    client.db.set('players',setPlayers).write()
+    
 
     if (client.commands.has(command)) {
       let foundCommand = client.commands.get(command);
